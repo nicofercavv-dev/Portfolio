@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
-import Controles from './controles/controles'
+import Controles from './controles'
+import IndicadoresCarrossel from './indicadores'
 
 const Carrossel = ({ projetos }) => {
   const [currentSlide, setcurrentSlide] = useState(0)
@@ -31,6 +32,11 @@ const Carrossel = ({ projetos }) => {
     }
   }
 
+  const switchIndex = (index) => {
+    startSlideTimer()
+    setcurrentSlide(index)
+  }
+
   useEffect(() => {
     startSlideTimer()
     return () => stopSlideTimer()
@@ -56,6 +62,7 @@ const Carrossel = ({ projetos }) => {
           </div>
         ))}
       </div>
+      <IndicadoresCarrossel projetos={projetos} currentIndex={currentSlide} switchIndex={switchIndex} />
       <Controles prev={prev} next={next} />
     </div>
   )
