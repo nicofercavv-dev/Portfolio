@@ -63,11 +63,6 @@ const ProjectsPageContainer = styled.div`
             justify-content: space-around;
             align-items: center;
             white-space: normal;
-            border: 1px solid transparent;
-
-            &:hover {
-                border: 1px solid white;
-            }
 
             .descricao {
                 width: 45%;

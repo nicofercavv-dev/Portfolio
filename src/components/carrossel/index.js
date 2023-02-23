@@ -54,11 +54,11 @@ const Carrossel = ({ projetos }) => {
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris aliquam massa et ligula auctor volutpat. Fusce vestibulum mi purus, in convallis justo iaculis viverra. ksfjksfksadasfs, dfgdgdageag.eg
               </p>
               <div className='links'>
-                <a>REPOSITÓRIO</a>
-                <a>SITE</a>
+                <a href={item.repositorio} target={'_blank'} rel="noreferrer">REPOSITÓRIO</a>
+                <a href={item.site} target={'_blank'} rel="noreferrer noopener">SITE</a>
               </div>
             </div>
-            <img src={item.capa}/>
+            <img src={`${process.env.REACT_APP_BASEURL}/${item.capa}`}/>
           </div>
         ))}
       </div>

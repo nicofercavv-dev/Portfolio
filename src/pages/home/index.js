@@ -7,7 +7,7 @@ const Home = () => {
     <HomeContainer>
         <Header />
         <main>
-            <h1>Oie! Eu sou a Nicole, mas me chame de Nico :)</h1>
+            <h1>Oie! Eu sou a Nicole:)</h1>
             <p>
                 Sou uma desenvolvedora web focada especialmente no front-end, com experiência em sistemas reais. Acredito que a tecnologia é um dos maiores realizadores de sonhos da nossa atualizade e isso me empenha a ser cada vez melhor nas minhas habilidades e oferecer serviços cada vez mais excelentes.
             </p>
