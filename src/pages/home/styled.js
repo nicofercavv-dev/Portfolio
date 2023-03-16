@@ -93,6 +93,27 @@ const HomeContainer = styled.div`
             opacity: 1;
         }
     }
+
+    @media (max-width: 500px) {
+        width: 100%;
+        grid-template-rows: 20fr 80fr;
+
+        main{
+            justify-content: center;
+            gap: 70px;
+
+            h1 {
+                font-size: 1.4rem;
+                animation: typing 1s steps(15, end),
+                blink-typing 1s step-end infinite;
+            }
+
+            p {
+                width: 80%;
+                font-size: 1rem;
+            }
+        }
+    }
 `
 
 export default HomeContainer

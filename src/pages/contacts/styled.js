@@ -11,10 +11,12 @@ const ContactContainer = styled.div`
 
     main {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
 
       .profile-container {
-        width: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -22,12 +24,12 @@ const ContactContainer = styled.div`
 
       .profile {
         display: block;
-        width: 210px;
+        width: 150px;
         border-radius: 50%;
-        margin: auto;
-        border: 2px solid #721CAB;
-        padding: 7px;
-        box-shadow: 2px 2px 4px 1px #131313;
+        margin: 20px auto;
+        border: 3px solid #721CAB;
+        padding: 4px;
+        /* box-shadow: 2px 2px 4px 1px #131313; */
       }
 
       .text {
@@ -35,45 +37,62 @@ const ContactContainer = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-end;
+        align-items: center;
 
         h2 {
           width: 80%;
         }
 
         p {
-          width: 80%;
+          width: 85%;
           color: white;
           text-align: center;
+          line-height: 1.2rem;
         }
       }
 
       h2 {
         color: white;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         text-align: center;
         margin-bottom: 20px;
       }
 
       section {
-        /* background-color: #721CAB; */
-        width: 100%;
-        height: 170px;
-        margin-top: 20px;
+        width: 80%;
+        height: 150px;
+        margin-top: 10px;
         display: flex;
         justify-content: space-evenly;
-        align-items: center;
+        align-items: flex-start;
       }
 
       .contact {
-        color: white;
-        text-decoration: none;
         cursor: pointer;
 
         .icon {
-          height: 50px;
+          height: 40px;
           display: block;
           margin: 0 auto;
+        }
+      }
+    }
+
+    @media (max-width: 500px) {
+      main {
+        .profile-container {
+          margin-top: 10px;
+        }
+        .profile {
+          margin: auto;
+        }
+
+        .text {
+          width: 85%;
+        }
+
+        section {
+          width: 95%;
         }
       }
     }

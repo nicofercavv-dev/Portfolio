@@ -14,27 +14,27 @@ const ContactPage = () => {
     <ContactContainer>
       <Header />
       <main>
+        <div className='profile-container'>
+          <img src={fotoPerfil} className='profile' />
+        </div>
         <div className='text'>
           <h2>Entre em contato comigo!</h2>
           <p>Obrigada pelo acesso ao meu site! Se quiser entrar em contato aqui está uma lista de lugares onde você pode me encontrar :)</p>
         </div>
-        <div className='profile-container'>
-          <img src={fotoPerfil} className='profile' />
-        </div>
         <section>
-          <a href='https://instagram.com' target='_blank' rel='noreferrer' className='contact'>
+          <a href='mailto:nicoleferreira281@gmail.com?subject=Assunto do email&body=Olá tudo bem? Vamos conversar!' target='_blank' rel='noreferrer' className='contact'>
             <img src={email} className='icon' />
           </a>
-          <a className='contact'>
+          <a href='https://linkedin.com/in/nicoferca' target='_blank' rel='noreferrer' className='contact'>
             <img src={linkedin} className='icon' />
           </a>
-          <a className='contact'>
+          <a href='https://github.com/nicofercavv-dev' target='_blank' rel='noreferrer' className='contact'>
             <img src={github} className='icon' />
           </a>
-          <a className='contact'>
+          <a href='https://instagram.com/nicoferca' target='_blank' rel='noreferrer' className='contact'>
             <img src={instagram} className='icon' />
           </a>
-          <a className='contact'>
+          <a href='https://twitter.com/ultravlncebaby' target='_blank' rel='noreferrer' className='contact'>
             <img src={twitter} className='icon' />
           </a>
         </section>

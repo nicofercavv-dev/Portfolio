@@ -49,9 +49,6 @@ const StackContainer = styled.div`
                 transform: scale(1.015);
                 transition: ease 1s;
                 cursor: pointer;
-                svg, p {
-                    
-                }
             }
         }
 
@@ -92,7 +89,7 @@ const StackContainer = styled.div`
             margin: 30px auto;
             text-align: center;
 
-            &::after {
+            /* &::after {
                 content: '';
                 position: absolute;
                 background-color: #721CAB;
@@ -100,7 +97,7 @@ const StackContainer = styled.div`
                 height: 2px;
                 top: 13%;
                 left: 45%;
-            }
+            } */
         }
     }
 
@@ -113,6 +110,58 @@ const StackContainer = styled.div`
             opacity: 1;
             transform: translate(0);
         }
+    }
+
+    @media (max-width: 500px) {
+        main {
+            flex-direction: column;
+            .sections {
+                width: 95%;
+                height: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 10px;
+
+                svg {
+                    height: 20px;
+                }
+
+                p {
+                    margin-top: 0;
+                    font-size: 0.7rem;
+                }
+            }
+            .sections > button {
+                width: 105px;
+                height: 55px;
+            }
+
+            .section-description {
+                width: 90%;
+                height: 90%;
+
+                ul > li {
+                    font-size: 0.8rem;
+                    text-align: justify;
+                }
+            }
+
+            .section-description > h2 {
+                margin: 10px auto;
+            }
+        }
+
+        @keyframes slide {
+        0% {
+            opacity: 0.1;
+            transform: translateY(-10px);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
     }
 `
 

@@ -11,14 +11,14 @@ const Stack = () => {
   const [stack, setStack] = useState('front')
 
   const handleClick = (e) => {
-    console.log('c')
-    if (e.target.id === 'front') {
+    console.log(e.target.className)
+    if (e.target.className === 'front') {
       setStack('front')
     }
-    if (e.target.id === 'back') {
+    if (e.target.className === 'back') {
       setStack('back')
     }
-    if (e.target.id === 'other') {
+    if (e.target.className === 'other') {
       setStack('other')
     }
   }
@@ -28,17 +28,17 @@ const Stack = () => {
         <Header />
         <main>
             <div className='sections'>
-                <button id='front' to='frontend' onClick={handleClick} className={stack === 'front' ? 'active' : ''}>
-                    <FontAwesomeIcon icon={faWindowRestore} id='front' />
-                    <p id='front'>FRONTEND</p>
+                <button to='frontend' onClick={handleClick} className={stack === 'front' ? 'active front' : 'front'}>
+                    <FontAwesomeIcon icon={faWindowRestore} className='front' onClick={handleClick} />
+                    <p className='front' onClick={handleClick}>FRONTEND</p>
                 </button>
-                <button id='back' to='frontend' onClick={handleClick} className={stack === 'back' ? 'active' : ''}>
-                    <FontAwesomeIcon icon={faDatabase} id='back' />
-                    <p id='back'>BACKEND</p>
+                <button to='backend' onClick={handleClick} className={stack === 'back' ? 'active back' : 'back'}>
+                    <FontAwesomeIcon icon={faDatabase} className='back' onClick={handleClick} />
+                    <p className='back' onClick={handleClick}>BACKEND</p>
                 </button>
-                <button id='other' to='frontend' onClick={handleClick} className={stack === 'other' ? 'active' : ''}>
-                    <FontAwesomeIcon icon={faLaptop} id='other' />
-                    <p id='other'>OUTROS</p>
+                <button to='frontend' onClick={handleClick} className={stack === 'other' ? 'active other' : 'other'}>
+                    <FontAwesomeIcon icon={faLaptop} className='other' onClick={handleClick} />
+                    <p className='other'>OUTROS</p>
                 </button>
             </div>
             {stack === 'front' && <div className='section-description current-description'>

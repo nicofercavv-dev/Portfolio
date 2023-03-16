@@ -10,7 +10,7 @@ const ProjectsPageContainer = styled.div`
     background: linear-gradient(135deg, rgba(22,22,22,1) 0%, rgba(32,31,31,1) 35%, rgba(61,61,61,1) 100%);
 
     main {
-        position: relative;
+        /* position: relative; */
         h1 {
             color: white;
             text-align: center;
@@ -20,7 +20,7 @@ const ProjectsPageContainer = styled.div`
 
         .carrossel {
             height: 360px;
-            margin: 20px auto 0 auto;
+            margin: 20px auto;
             overflow: hidden;
             width: 900px;
 
@@ -82,12 +82,13 @@ const ProjectsPageContainer = styled.div`
                     color: white;
                     width: 90%;
                     max-height: 100%;
-                    word-break: break-all;
+                    /* word-break: break-all; */
                 }
 
                 .links > a {
                     margin-right: 20px;
                     color: #721CAB;
+                    text-decoration: none;
 
                     &:hover {
                         transition: ease 1s;
@@ -116,6 +117,61 @@ const ProjectsPageContainer = styled.div`
         100% {
             color: #8E39BF;
             border-bottom: 2px solid #8E39BF;
+        }
+    }
+
+    @media (max-width: 500px) {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15fr 85fr;
+        background: rgb(22,22,22);
+        background: linear-gradient(135deg, rgba(22,22,22,1) 0%, rgba(32,31,31,1) 35%, rgba(61,61,61,1) 100%);
+
+        main {
+            h1 {
+                font-size: 1.3rem;
+            }
+
+            .carrossel {
+                height: 40%;
+                width: 90vw;
+                margin: auto;
+                overflow: hidden;
+            }
+
+            .carrossel-interno {
+                height: 100%;
+                white-space: nowrap;
+                transition: ease 1s;
+            }
+
+            .carrossel-item {
+                width: 100%;
+                height: 100%;
+                .descricao {
+                    height: 90%;
+                    width: 50%;
+                    justify-content: center;
+                    gap: 20px;
+                    h3 {
+                        font-size: 1rem;
+                    }
+
+                    p {
+                        font-size: 0.65rem;
+                    }
+
+                    .links > a {
+                        font-size: 0.7rem;
+                    }
+                }
+
+                img {
+                    max-height: 40%;
+                }
+            }
         }
     }
 `

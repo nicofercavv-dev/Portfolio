@@ -30,6 +30,28 @@ const NavContainer = styled.header`
         color: white;
         border-bottom: 3px solid #721CAB;
     }
+
+    @media (max-width: 500px) {
+        justify-content: center;
+        flex-direction: column;
+
+        h2 {
+            margin: 0;
+            margin-top: 30px;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            width: 100%;
+            flex-wrap: wrap;
+            height: auto;
+        }
+
+        nav > a {
+            margin: 0 10px;
+        }
+    }
 `
 
 export default NavContainer

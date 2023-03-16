@@ -24,5 +24,9 @@ const IndicadoresContainer = styled.div`
     .active {
         background-color: #721CAB;
     }
+
+    @media (max-width: 500px) {
+        max-width: 300px;
+    }
 `
 export default IndicadoresContainer

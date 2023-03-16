@@ -11,7 +11,7 @@ const Home = () => {
             <p>
                 Sou uma desenvolvedora web focada especialmente no front-end, com experiência em sistemas reais. Acredito que a tecnologia é um dos maiores realizadores de sonhos da nossa atualizade e isso me empenha a ser cada vez melhor nas minhas habilidades e oferecer serviços cada vez mais excelentes.
             </p>
-            <button><a href='' download='CV'>BAIXE MEU CV AQUI</a></button>
+            <button><a href={`${process.env.REACT_APP_BASEURL}/doc/nicoleCV.pdf`} download='CV'>BAIXE MEU CV AQUI</a></button>
         </main>
     </HomeContainer>
   )
