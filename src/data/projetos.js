@@ -18,7 +18,7 @@ export const projetos = [
     capa: 'img/portfolio.png',
     descricao: 'Este é o meu portfólio, que desenvolvi com React e Styled Components',
     repositorio: 'https://github.com/nicofercavv-dev/Portfolio',
-    site: 'https://github.com/nicofercavv-dev/acelera-movies-front-nicole'
+    site: 'https://nicoleferreira.netlify.app/'
   },
   {
     nome: 'Site flexbox',
